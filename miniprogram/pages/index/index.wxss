@@ -1,0 +1,432 @@
+/**index.wxss**/
+.nav .van-nav-bar {
+    background-color: transparent !important;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    color: #000000 !important;
+}
+
+/* .van-nav-bar .van-nav-bar__title{
+    font-size: 14px !important;
+} */
+
+.van-hairline--bottom:after {
+    border-bottom-width: 0px !important;
+}
+
+page .container {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    background: #F7F8FA;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-bottom: 5px;
+    box-sizing: border-box;
+}
+
+.containerView{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 11;
+    overflow: hidden;
+    background-color: #F7F8FA;
+}
+
+.headerBanner {
+    width: 100%;
+    /* height: 247px; */
+    background-color: #C98E75;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: relative;
+    top: 0;
+    overflow: hidden;
+    left: 0;
+    z-index: 10;
+}
+
+.headerBanner .seach {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 15px;
+    top: 180rpx;
+}
+
+.seach image{
+    width: 100%;
+    display: block;
+}
+
+.headerBanner .tabs {
+    width: 90%;
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    bottom: 5px;
+    color: "#FFFFFF"
+}
+
+.tabs .van-tabs__wrap {
+    background-color: transparent !important;
+}
+
+.van-tabs__line{
+    background-color: none !important;
+    background-image: url(https://dainixue.oss-cn-beijing.aliyuncs.com/uploads/image/8221626597523.jpg) !important;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* .van-tab--active .van-tab__title {
+    color: rgba(255, 255, 255, 1) !important;
+    font-size: 16px !important;
+    font-weight: 500;
+} */
+
+.van-tab .van-tab__title {
+    color: rgba(255, 255, 255, 1);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.van-hairline--top-bottom:after {
+    border-width: 0 !important;
+}
+
+.bannerStyle {
+    width: 100%;
+    display: block;
+}
+
+
+/* 公告start */
+.noticeView{
+    width: 100%;
+    padding: 10px 0;
+    box-sizing: border-box;
+    background-color: #F7F8FA;
+}
+
+
+
+.notice {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.notice image {
+    width: 18px;
+    height: 14px;
+    display: inline-block;
+}
+
+.swiper-container {
+    margin-left: 20rpx;
+    width: 500rpx;
+    line-height: 12px;
+    height: 12px;
+    font-size: 12px;
+    color: #999;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.swiper-item {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    font-size: 24rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    letter-spacing: 2rpx;
+    height: 100%;
+    display: inline-block;
+}
+
+.xiangqing {
+    float: right;
+    font-size: 12px;
+    color: red;
+}
+
+/* 公告end */
+
+.image {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.image .images {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.blackText {
+    width: 100%;
+    height: auto;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+.blackText .blackView {
+    width: 90%;
+    margin: 10px auto;
+    box-sizing: border-box;
+}
+.blackText .blackView:first-child,  .blackText .blackView:last-child{
+    margin: 0 auto;
+}
+
+.blackView .blackTitleView {
+    width: 100%;
+    display: inline-block;
+}
+
+.blackView .blackTitleView2 {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+}
+
+.blackTitleView .blackTitle,
+.blackTitleView2 .blackTitle {
+    /* display: inline-block; */
+    float: left;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* display: inline-block; */
+}
+
+.blackTitleView .blackTitle2,
+.blackTitleView2 .blackTitle2 {
+    width: 70%;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    line-height: 18px;
+    display: -webkit-box;
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    /* white-space: nowrap; */
+}
+
+.blackTitleView .blackIcon,
+.blackTitleView2 .blackIcon {
+    font-size: 12px;
+    color: red;
+    line-height: 12px;
+    margin-right: 10px;
+    box-sizing: border-box;
+}
+
+.blackTitleView .blackSource {
+    font-size: 12px;
+    float: left;
+    color: #999999;
+    padding-top: 6px;
+    /* display: inline-block; */
+    box-sizing: border-box;
+}
+
+.blackTitleView2 .blackSource {
+    font-size: 12px;
+    color: #999999;
+    display: inline-block;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}
+
+.blackTitleView .blackImag,
+.blackTitleView2 .blackImage {
+    box-sizing: border-box;
+    width: 30%;
+    height: 70px;
+    float: right;
+    border-radius: 5px;
+}
+
+.iconTextTop {
+    font-size: 10px;
+    color: #E4536B;
+    border-radius: 2px;
+    float: left;
+    margin-right: 10rpx;
+    box-sizing: border-box;
+    background: rgba(228, 83, 107, 0.1);
+}
+
+
+.carousel {
+    width: 100%;
+    background-color: #F7F8FA;
+    display: inline-block;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.carousel .carouselImage {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+.journalism1,
+.journalism2 {
+    width: 100%;
+    height: auto;
+    background-color: #FFFFFF;
+    display: inline-block;
+    padding: 6px 0;
+    box-sizing: border-box;
+}
+
+.journalism2 {
+    margin: 1px 0;
+}
+
+.journalism1 .journalism1View,
+.journalism2 .journalism2View {
+    width: 90%;
+    /* padding: 10px 0; */
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.journalism1View .journalism1Title {
+    width: 100%;
+    display: inline-block;
+    font-size: 16px;
+    color: #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.journalism1View .journalism1Title3 {
+    font-weight: 500;
+    width: 100%;
+    font-size: 16px;
+    color: #000;
+    line-height: 18px;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.journalism1View .journalism1Images {
+    display: flex;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.journalism1Images .journalism1Image {
+    flex: 1;
+    border-radius: 5px;
+    height: 70px;
+}
+
+.journalism1Images3 {
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.journalism1Images3 .journalism1Image {
+    flex: 1;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.journalism1Images .journalism1Image:nth-child(2) {
+    margin: 0 5px;
+    box-sizing: border-box;
+}
+
+.journalism1View .journalism1Icon {
+    font-size: 12px;
+    color: red;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+.journalism1View .journalism1Text {
+    font-size: 12px;
+    color: #999;
+    position: relative;
+    /* top: -2rpx; */
+    float: left;
+}
+
+.journalism2View .journalism2Title {
+    width: 60%;
+    font-size: 12px;
+    color: #000;
+    line-height: 18px;
+    display: -webkit-box;
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+.journalism2View .journalism2Images {
+    float: right;
+    height: 70px;
+    width: 30%;
+}
+
+.journalism2Images .journalism2Image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 5px;
+}
+
+
+.journalism2View .journalism2Icon {
+    font-size: 12px;
+    color: red;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+.journalism2View .journalism2Text {
+    font-size: 12px;
+    color: #999;
+    position: relative;
+    top: -2px;
+}

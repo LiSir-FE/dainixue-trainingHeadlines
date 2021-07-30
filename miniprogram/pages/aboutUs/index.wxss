@@ -1,0 +1,62 @@
+/* miniprogram/pages/aboutUs/index.wxss */
+
+.nav .van-nav-bar {
+	background-color: #FF775D !important;
+}
+
+/* .van-nav-bar .van-nav-bar__title{
+    font-size: 14px !important;
+} */
+
+.van-hairline--bottom:after {
+	border-bottom-width: 0px !important;
+}
+
+page {
+	background: #FFFFFF;
+	position: relative;
+}
+
+page .container {
+	width: 100%;
+	height: auto;
+	padding: 0;
+	margin: 0;
+	background: #FFFFFF;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	box-sizing: border-box;
+}
+
+.loginImage {
+	width: 100%;
+	display: inline-block;
+}
+
+.loginImage image {
+	width: 153px;
+	display: block;
+	margin: 100rpx auto 50rpx auto;
+}
+
+
+.edition {
+	width: 100%;
+	line-height: 80rpx;
+	font-size: 28rpx;
+	color: #000000;
+	text-align: center;
+}
+
+.describe {
+	width: 90%;
+	margin: 0 auto;
+	font-size: 32rpx;
+	line-height: 50rpx;
+}
+
+.describe .describeText {
+	text-indent: 60rpx;
+	display: inline-block;
+}

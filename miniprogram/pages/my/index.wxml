@@ -1,0 +1,70 @@
+<!--miniprogram/pages/my/index.wxml-->
+<wxs src="../../filter/index.wxs" module="filter" />
+<view class="container">
+	<!-- 头部 -->
+	<view class="headerBanner">
+		<van-nav-bar title="" class="nav"></van-nav-bar>
+		<view class="headerPortrait">
+			<image class="portrait" mode="scaleToFill" src="{{defaultAvatar}}"></image>
+		</view>
+		<view wx:if="{{!storAge}}" class="headerInfo" bindtap="headerButton">
+			<text class="headerButton">请登录</text>
+		</view>
+		<view class="headerInfo" wx:else>
+			<view class="headerName" wx:if="{{storAge.nickname != null && storAge.nickname !=undefined}}">{{storAge.nickname}}</view>
+			<!-- infopage.mobile -->
+			<view class="headerPhone">{{storAge.mobile}}</view>
+			<!-- <view class="headerPhone">{{filter.toHide(infopage.mobile)}}</view> -->
+		</view>
+
+		<!-- 资料 -->
+		<view class="dataView">
+			<block wx:for="{{dataInfo}}" wx:key="*this">
+				<!-- /pages/notice/notice?title={{item.url}} -->
+				<view class="dataInfoItem" bindtap="itemViewFn" data-item="{{item}}">
+					<view>
+						<image src="{{item.icon}}" class="dataInfoItemIcon"></image>
+						<!-- <van-icon name="{{item.icon}}" class="dataInfoItemIcon"></van-icon> -->
+						<text class="dataInfoItemText">{{item.title}}</text>
+					</view>
+				</view>
+				<!-- <navigator url='{{item.url}}' open-type='navigate'>
+					
+				</navigator> -->
+			</block>
+
+		</view>
+
+
+		<!-- cell单元格 -->
+		<view class="cellView">
+			<block wx:for="{{cellInfo}}" wx:key="*this">
+				<navigator url='{{item.url}}' open-type='navigate'>
+					<view class='work-input-panel'>
+						<image src="{{item.icon}}" class="work-input-title"></image>
+						<view class='work-input' placeholder-class="placeholder-class" value='{{item.title}}'
+							bindinput='bindinputTitle'>{{item.title}}</view>
+					</view>
+					<!-- <van-cell icon="{{item.icon}}" title="{{item.title}}" class="cellViewItem"></van-cell> -->
+				</navigator>
+			</block>
+		</view>
+	</view>
+
+
+
+
+
+	<!-- 退出登录 -->
+	<view wx:if="{{storAge}}" class="signOut" bindtap="signOut">
+		<van-button color="#999999" class="signOutBtn" round>退出登录</van-button>
+	</view>
+
+	<!-- 退出登录弹框 -->
+	<dialog visible="{{dialogVisible}}" showFooter="{{footerVisible}}" title="确认退出" color="{{color}}"
+		bind:confirm="onLinke" bind:cancel="onLinke">
+		　　　　<view class='dialog-body' slot="dialog-body">
+			　　 <view class="dialog-text">退出后将无数收到带你学的优质课程哟！</view>
+			　　 </view>
+	</dialog>
+</view>

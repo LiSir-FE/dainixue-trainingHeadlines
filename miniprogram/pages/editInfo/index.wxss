@@ -1,0 +1,135 @@
+/* miniprogram/pages/editInfo/index.wxss */
+.nav .van-nav-bar{
+    background-color: #C98E75 !important;
+}
+
+/* .van-nav-bar .van-nav-bar__title{
+    font-size: 14px !important;
+} */
+
+.van-hairline--bottom:after{
+    border-bottom-width: 0px !important;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-bottom: 5px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+
+.headerUpImg{
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.headerUpImg .headerUpImgs{
+    width: 64px;
+    height: 64px;
+    margin: 0 auto;
+    border-radius: 50%;
+    /* background-color: #CCCCCC; */
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.headerUpImgs .head-portrait{
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.headerUpImg .head-text{
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    line-height: 40px;
+    display: inline-block;
+}
+
+.work-form{
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+
+.work-input-panel{
+    display: flex;
+    flex-direction: row;
+    width: 690rpx;
+    height: 88rpx;
+    border-bottom:1px dashed #f2f2f2;
+    margin-bottom: 20rpx;
+}
+
+.work-input-title{
+    width: 210rpx;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    font-family: PingFangSC-Regular;
+    font-size: 28rpx;
+    color: #666666;
+    letter-spacing: 0;
+    padding: 0rpx 0rpx 0rpx 30rpx;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.work-input{
+    width: 500rpx;
+    height: 100%;
+    font-size: 28rpx;
+    flex-grow: 1;
+    flex-shrink: 1;
+    line-height: 88rpx;
+}
+
+/* 去除button默认样式 */
+
+button::after{ 
+	border: none; 
+}
+
+button {
+	background-color: transparent;
+	padding-left: 0;
+	padding-right: 0;
+	line-height:inherit;
+	outline: 0;
+	border-radius:0;
+}
+
+button[disabled]{
+	background-color: transparent !important;
+}
+
+.trunkLine-done-button {
+	color: #FFFFFF;
+    font-size: 14px;
+    line-height: 60rpx;
+    background-image: linear-gradient(-229deg, #F8316C 16%, #F9684D 100%);
+	background-color: red;
+	width: 80% !important;
+    border-radius: 30px;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -40% !important;
+}

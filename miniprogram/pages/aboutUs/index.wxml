@@ -1,0 +1,13 @@
+<!--miniprogram/pages/aboutUs/index.wxml-->
+<view class="container">
+	<view class="loginImage">
+		<image mode="widthFix" src="{{headerLogo}}"></image>
+	</view>
+	<view class="edition">{{edition}}</view>
+	<view class="describe">
+		<!-- <block wx:for="{{describe}}" wx:key="*this">
+			<text class="describeText">{{item}}</text>
+		</block> -->
+		<text class="describeText">{{describe}}</text>
+	</view>
+</view>

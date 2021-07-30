@@ -1,0 +1,8 @@
+<!--components/modal/modal.wxml-->
+<view class="modal-container" wx:if="{{visible}}" catchtap="modalClickFn">
+	<view class="modalView">
+		<block wx:for="{{modalArray}}" wx:key="*this">
+			<view class="modal-view" data-index="{{index}}" bindtap="modalItemFn">{{item.name}}</view>
+		</block>
+	</view>
+</view>

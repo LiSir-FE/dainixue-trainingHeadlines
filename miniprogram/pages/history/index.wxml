@@ -1,0 +1,12 @@
+<!--miniprogram/pages/history/index.wxml-->
+<view class="container">
+	<!-- tab切换 -->
+	<view class="tabs">
+		<mytabs tabArray="{{tabArrays}}" bind:myevent="tabsChange" class="myTbs" type="{{type}}"></mytabs>
+	</view>
+
+	<view class="realTimeInfoView">
+		<curriculum courseArray="{{bookInfo}}" wx:if="{{type == 1}}" stars="{{true}}"></curriculum>
+		<realTimeInfo textArray='{{textArrays}}' hidden="{{true}}" scrollY="{{false}}" wx:else></realTimeInfo>
+	</view>
+</view>

@@ -1,0 +1,20 @@
+<!--miniprogram/pages/planner/index.wxml-->
+<view class="container">
+
+	<image src="{{plannerDetails}}" mode="widthFix" class="backgroundBg"></image>
+
+	<!-- <view>
+		<image></image>
+		<text>咨询老师</text>
+	</view> -->
+
+	<view class="botomBtn">
+		<view class="bottomBtnLeft">
+			<view class="bottomBtnLeftVip">¥<text>{{isvIP}}</text> <view style="color: #999999;display:inline-block">元</view>  </view>
+			<view class="bottomBtnLefts">{{jiage}}</view>
+		</view>
+		<view class="bottomBtnRight">
+			<button class='trunkLine-done-button' form-type='submit' bindtap="signUp">确认报名</button>
+		</view>
+	</view>
+</view>

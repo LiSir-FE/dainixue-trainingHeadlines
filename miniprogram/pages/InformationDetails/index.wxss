@@ -1,0 +1,132 @@
+/* miniprogram/pages/InformationDetails/index.wxss */
+
+.nav .van-nav-bar {
+	background-color: #FF775D !important;
+}
+/* image{
+	height: auto !important;
+} */
+
+/* .van-nav-bar .van-nav-bar__title{
+    font-size: 14px !important;
+} */
+
+.van-hairline--bottom:after {
+	border-bottom-width: 0px !important;
+}
+
+page {
+	background: #FFFFFF;
+	position: relative;
+}
+
+page .container {
+	width: 100%;
+	height: auto;
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+	background: #FFFFFF;
+	/* display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	box-sizing: border-box; */
+}
+
+.container .headerTitle {
+	width: 90%;
+	margin: 0 auto;
+	font-size: 20px;
+	font-weight: 500;
+	color: #000000;
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-break: break-all;
+	padding: 10px 20px 0px 0px;
+	box-sizing: border-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+
+.container .source {
+	width: 90%;
+	margin: 10px 5%;
+	box-sizing: border-box;
+	/* display: inline-block; */
+}
+
+.source .sourceTime,
+.source .sourceText {
+	float: left;
+	font-size: 24rpx;
+	color: #4A4A4A;
+	box-sizing: border-box;
+}
+span{
+	display: none;
+}
+
+.source .sourceText {
+	float: right;
+}
+
+.container .imgOrAv {
+	width: 100%;
+	margin-top: 10px;
+	display: inline-block;
+}
+
+.imgOrAv .imgOrAvImg,
+.imgOrAv .imgOrAvAv {
+	width: 100%;
+	display: inline-block;
+}
+
+.imgOrAvImg image {
+	display: block;
+	width: 100%;
+}
+
+/* .wxParse-inline{
+	width: 100% !important;
+	padding: 0 10px !important;
+	box-sizing: border-box !important;
+	display: inline-block !important;
+} */
+
+.imgOrAvAv video {
+	display: block;
+	width: 100%;
+}
+
+.container .details {
+	width: 90%;
+	margin: 0 auto;
+	font-size: 16px;
+	line-height: 50rpx;
+	color: #333333;
+	padding: 0 0 10px 0;
+	box-sizing: border-box;
+	margin-top: -8px;
+	display: flow-root;
+}
+
+image{
+	width: 100% !important;
+}
+
+.details .detailsText {
+	/* text-indent: 60rpx; */
+	display: inline-block;
+	line-height: 28px;
+}
+
+.wxParse-p text{
+	display: none !important;
+}
+.wxParse-inline{
+	margin: 10px 0 !important;
+}
+
+/* @import "../../wxParse/wxParse.wxss"; */

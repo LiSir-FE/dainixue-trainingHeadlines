@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "van-search": "vant-weapp/search/index",
+    "select": "../../components/select/select",
+    "van-tabs": "vant-weapp/tabs/index",
+    "van-tab": "vant-weapp/tab/index",
+    "realTimeInfo": "../../components/realTimeInfo/realTimeInfo",
+    "curriculum": "../../components/curriculum/curriculum"
+  },
+  "navigationBarTitleText": "搜索"
+}

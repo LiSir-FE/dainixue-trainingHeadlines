@@ -1,0 +1,71 @@
+<!--components/trainVadio/trainVadio.wxml-->
+<view class="container">
+	<!-- <mytabs tabArray="{{tabArrays}}" bind:myevent="tabsChange" data-textArrayFlag="{{textArrayFlag}}"></mytabs> -->
+	<swiper class="q_swiper" circular="{{false}}" vertical="{{true}}" data-typ="{{type}}"
+		bindchange="q_swiperBindchange" bind:transition="_transition">
+		<block wx:for="{{videoArray}}" wx:key="*this">
+			<swiper-item>
+				<view class="q_videoView">
+					<!-- wx:if="{{index==q_videoIndex}}" 用于控制只播放当前视频，否则多个视频会同时播放没刷到的也会播放 -->
+					<video wx:if="{{index == q_videoIndex}}" custom-cache="{{false}}" src="{{item.video_src}}" autoplay
+						loop show-fullscreen-btn="{{false}}" play-btn-position="center" bindplay="bindtimeupdateFn" data-item="{{item}}" enable-play-gesture="{{true}}">
+					</video>
+
+
+					<!-- <view class="teacherView" bindtap="teacherFn">
+						<image src="{{teacherSrc}}" mode="widthFix"></image>
+					</view> -->
+
+					<!-- 描述 -->
+					<view class="describe">
+						<!-- <view class="describeHead">
+							<van-icon name="volume-o"></van-icon>
+							<text>{{item.title}}</text>
+						</view> -->
+						<view class="describeText">{{item.title}}</view>
+						<view class="describeLink">{{item.describeLink}}</view>
+					</view>
+
+
+					<!-- 右侧分享 -->
+					<view class="shareView">
+						<image mode="scaleToFill" src="../../images/index/video-Collection.png"
+							wx:if="{{item.userInfo.status == 0}}" data-idx="0" data-index="{{index}}"
+							data-item="{{item}}" catchtap="collectionFn">
+						</image>
+						<image mode="scaleToFill" src="../../images/index/video-Collections.png" wx:else data-idx="1"
+							data-item="{{item}}" data-index="{{index}}" catchtap="collectionFn"></image>
+						<image mode="scaleToFill" src="../../images/index/video-give.png"
+							wx:if="{{item.userInfo.praise == 0}}" data-idx="0" data-index="{{index}}"
+							data-item="{{item}}" bindtap="giveFn"></image>
+						<image mode="scaleToFill" src="../../images/index/video-gives.png" wx:else data-idx="1"
+							data-item="{{item}}" data-index="{{index}}" bindtap="giveFn"></image>
+
+						<button open-type="share" size="mini">
+							<image mode="scaleToFill" src="../../images/index/video-share.png" data-item="{{item}}"
+								bindtap="shareFn"></image>
+						</button>
+
+					</view>
+
+					<view class="bottom">
+						<view class="signUp" bindtap="teacherFns" data-courId = "{{item.course_basic_id}}" data-item = "{{item}}">
+							<view class="signUpLeft">我要报名</view>
+							<view class="signUpRight">
+								<view class="signUpRightPriceVip">{{item.price}}<text style="font-size: 14px">元</text>
+								</view>
+								<view class="signUpRightPrice">{{item.coupon_price}}元</view>
+							</view>
+						</view>	
+						<!-- <view class="kecxiangq" bindtap="teacherFn">课程详情</view> -->
+					</view>
+
+
+				</view>
+			</swiper-item>
+		</block>
+	</swiper>
+
+
+
+</view>

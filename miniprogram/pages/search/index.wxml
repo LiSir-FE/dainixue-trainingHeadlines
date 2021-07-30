@@ -1,0 +1,30 @@
+<!--miniprogram/pages/search/index.wxml-->
+<view class="container">
+	<view class="headerView">
+		<view class="headerSearch">
+			<van-search placeholder="请输入关键词" shape="round" value="{{search}}" left-icon="search" class="headerSearchBtn" bind:blur="iconClick" bind:change="onChange" bind:search="onSearch"></van-search>
+			<view class="select-wrap">
+				<select class="select" propArray='{{selectArray}}' bind:myevent="selectChange" iconSrc="{{iconSrc}}"></select>
+			</view>
+		</view>
+
+		 <!-- tab切换 -->
+		 <view class="tabs" wx:if="{{activeFlag}}">
+            <van-tabs active="{{active}}" bind:change="tabsChange" color="#FFFFFF">
+                <van-tab title="热门" name="a"></van-tab>
+				<van-tab title="艺考培训" name="d"></van-tab>
+                <van-tab title="职业培训" name="b"></van-tab>
+                <van-tab title="声乐指导" name="c"></van-tab>
+            </van-tabs>
+        </view>
+	</view>
+
+	<view class="dataNum">
+		<view class="dataNums">共 <text class="dataNumss">{{dataNum}}</text> 结果</view>
+	</view>
+
+	<view class="realTimeInfoView">
+		<realTimeInfo textArray='{{textArrays}}' hidden="{{hidden}}" pageNo="{{pageNo}}" bind:mybindDownLoad="mybindDownLoad" bind:mytopLoad="mytopLoad" pageSize="{{pageSize}}" bind:myevent="selectChange" wx:if="{{textArrays}}" scrollY="{{false}}" class="realTimeViews"></realTimeInfo>
+		<curriculum courseArray="{{bookInfo}}" bind:myevent="selectChanges" wx:else></curriculum>
+	</view>
+</view>

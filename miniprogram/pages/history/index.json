@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "mytabs": "../../components/tabs/tabs",
+    "realTimeInfo": "../../components/realTimeInfo/realTimeInfo",
+    "curriculum": "../../components/curriculum/curriculum"
+  },
+  "navigationBarTitleText": "历史记录"
+}

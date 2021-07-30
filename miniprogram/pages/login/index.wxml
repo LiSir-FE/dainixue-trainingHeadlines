@@ -1,0 +1,35 @@
+<!--miniprogram/pages/login/index.wxml-->
+<view class="container">
+	<!-- 登录logo -->
+	<view class="loginImage">
+		<image mode="widthFix" src="{{loginSrc}}"></image>
+	</view>
+
+	<!-- 验证码or密码登录 -->
+	<view class="tabs">
+		<view class="tabsView" wx:if="{{registerFlag}}">
+			<van-tabs active="{{active}}" bind:change="tabsChange" color="#FFFFFF">
+				<van-tab title="验证码登录" name="a"></van-tab>
+				<!-- <van-tab title="密码登录" name="b"></van-tab> -->
+			</van-tabs>
+		</view>
+
+		<!-- 验证码or密码登录 -->
+
+		<view class="inputView">
+			<form class="work-from" bindsubmit="login">
+					<input type="number" maxlength="11" name="phone" value="{{phone}}" class="inputPhone" placeholder-class="inputPhonePlace" placeholder="输入手机号码" bindinput="phoneInput" />
+					<view class="inputViewPas" wx:if="{{passVcode}}">
+						<input class="inputPas" placeholder-class="inputPhonePlace" value="{{vCode}}" name="vCode" placeholder="验证码" bindinput="vCodeInput" />
+						<button class="inputVcode" disabled="{{codeDisabled}}" catchtap="getCodeFun" hover-class="plain-hover">{{getCode}}</button>
+					</view>
+					<view class="inputViewPas" wx:else>
+						<input class="inputPas" name="password" value="{{password}}" password placeholder-class="inputPhonePlace" placeholder="输入密码" bindinput="passwordInput" />
+					</view>
+					<!-- <view class="noAccount">{{yesorNo}}账号? 立即 <view style="color: #FF5437;display:inline-block" bindtap="registerFun" data-registerFlag="{{registerFlag}}">{{register}}</view></view> -->
+					<button class="signIn" data-login="{{registerFlag}}" form-type='submit'>{{loginText}}</button>
+			</form>
+		</view>
+		
+	</view>
+</view>

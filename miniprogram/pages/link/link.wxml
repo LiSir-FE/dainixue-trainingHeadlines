@@ -1,0 +1,2 @@
+<!--miniprogram/pages/link/link.wxml-->
+<web-view src="{{urls}}"></web-view>

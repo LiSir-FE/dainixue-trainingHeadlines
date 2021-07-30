@@ -1,0 +1,26 @@
+<!--miniprogram/pages/editInfo/index.wxml-->
+<view class="container">
+		<view class="headerUpImg">
+			<view class="headerUpImgs">
+				<image class="head-portrait" mode="scaleToFill" src="{{avatar}}" bindtap="changeAvatar"></image>
+			</view>
+			<text class="head-text">点击更换头像</text>
+		</view>
+
+		<form class="work-form" bindsubmit='submission'>
+			<view class='work-input-panel'>
+				<text class='work-input-title'>姓名</text>
+				<input class='work-input' placeholder-class="placeholder-class" placeholder="请输入用户姓名" value='{{userNameVal}}' name="userNameVal"></input>
+			</view>
+			
+			<view class='work-input-panel'>
+				<text class='work-input-title'>电话</text>
+				<input type='number' class='work-input' disabled="{{true}}" placeholder-class="placeholder-class" placeholder="请输入手机号" value='{{phone}}' name="phone"></input>
+			</view>
+
+			<button class='trunkLine-done-button' form-type='submit'>保存</button>
+		</form>
+
+
+		<modal visible="{{modalFlag}}" modalArray="{{modalArray}}" bind:myevent="modelFn"></modal>
+</view>

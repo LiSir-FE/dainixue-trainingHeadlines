@@ -1,0 +1,30 @@
+<!--components/realTimeInfo/realTimeInfo.wxml-->
+<view class="container">
+	<!-- 无数据 咨询 -->
+	<!-- 无数据课程 -->
+	<view wx:if="{{textArray.length <= 0 }}" class="nullPageView">
+		<image class="bannerStyle" mode="widthFix" src="{{nullPage}}"></image>
+		<text>快去发现精彩课程</text>
+	</view>
+	<scroll-view scroll-top="{{scrollTop}}" scroll-y="{{scrollY}}" style="height: {{textArray.length >= 1 ? '100%' : '0'}}" class="list"
+		bindscrolltolower="bindDownLoad" bindscrolltoupper="topLoad" bindscroll="scroll">
+		<view wx:for="{{textArray}}" wx:key="*this" class="viewFor">
+			<navigator url='../../pages/InformationDetails/index?top_id={{item.id}}' open-type='navigate'>
+				<view class="headerTitle" bindtap="serrView">
+					<view class="headerTitles">{{item.title}}</view>
+					<!-- <view class="headerTitleText">{{item.source}}</view> -->
+
+					<view class="iconText" wx:if="{{item.is_hot == 1}}">
+						<view class="iconTextTop" wx:if="{{item.is_hot == 1}}">置顶</view>
+						<view class="iconTextSource">{{item.marketing_language}}</view>
+					</view>
+				</view>
+			</navigator>
+		</view>
+	</scroll-view>
+	<view class="body-view">
+		<loading hidden="{{hidden}}" bindchange="loadingChange">
+			加载中...
+		</loading>
+	</view>
+</view>

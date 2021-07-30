@@ -1,0 +1,27 @@
+<!--miniprogram/pages/InformationDetails/index.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+
+<wxs src="../../filter/time.wxs" module="filter" />
+
+<view class="container">
+	<view class="headerTitle">{{info.title}}</view>
+
+	<view class="source">
+		<view class="sourceTime">{{filter.formatDate(info.updated_at)}}</view>
+		<view class="sourceText">来源: {{info.source}}</view>
+	</view>
+
+	<view class="imgOrAv" wx:if="{{info.video_src || info.thumb_img}}">
+		<view class="imgOrAvImg" wx:if="{{!info.video_src}}">
+			<image mode="widthFix" src="{{info.thumb_img}}"></image>
+		</view>
+		<view class="imgOrAvAv" wx:else>
+			<video src="{{info.video_src}}" binderror="videoErrorCallback" bindplay="bindPlayVideo" id="myVideo" enable-danmu danmu-btn  show-center-play-btn='{{false}}' show-play-btn="{{true}}" picture-in-picture-mode="{{['push', 'pop']}}" controls loop></video>
+		</view>
+	</view>
+
+
+	<view class="details">
+		<template is="wxParse" data="{{wxParseData:article.nodes}}"></template>
+	</view>
+</view>

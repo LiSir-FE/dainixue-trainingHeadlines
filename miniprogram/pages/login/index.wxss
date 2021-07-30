@@ -1,0 +1,155 @@
+/* miniprogram/pages/login/index.wxss */
+
+page .container {
+	width: 100%;
+	height: auto;
+	padding: 0;
+	margin: 0;
+	background-color: rgba(255, 255, 255, 0.8);
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	box-sizing: border-box;
+}
+
+.tabs {
+	width: 90%;
+	margin: 0 auto;
+}
+
+
+.van-tab--active .van-tab__title {
+	color: rgba(000000, 0, 0, 1) !important;
+	font-size: 16px !important;
+	text-align: left;
+}
+
+.van-tab .van-tab__title {
+	color: rgba(000000, 0, 0, 0.2);
+	font-size: 12px;
+}
+
+.van-hairline--top-bottom:after {
+	border-width: 0 !important;
+}
+
+.tabs .tabsView {
+	width: 55%;
+	display: block;
+}
+
+.inputView {
+	width: 100%;
+	display: inline-block;
+}
+
+.inputView .inputPhonePlace,
+.inputView .inputViewPas .inputPhonePlace {
+	color: rgba(000000, 0, 0, 0.2);
+	font-size: 30px;
+	display: inline-block;
+	width: 100%;
+	height: 50px;
+}
+
+.inputView .inputPhone {
+	height: 50px;
+	font-size: 30px;
+	display: inline-block;
+	width: 100%;
+	border-bottom: 1px solid #E9E9E9;
+	padding: 10px 0;
+}
+
+.inputView .inputViewPas {
+	width: 100%;
+	position: relative;
+}
+
+.inputView .inputViewPas .inputPas {
+	height: 50px;
+	font-size: 30px;
+	display: inline-block;
+	width: 100%;
+	border-bottom: 1px solid #E9E9E9;
+	padding: 10px 0;
+}
+
+.inputView .inputViewPas .inputVcode {
+	font-size: 14px;
+	color: #FF5437;
+	position: absolute;
+	right: 10rpx;
+	top: 0;
+	width: 75px;
+	height: 100%;
+	z-index: 2;
+	padding: 0;
+	margin: 0;
+	line-height: 100px;
+	text-align: right;
+	z-index: 20;
+}
+
+.inputView .noAccount {
+	width: 100%;
+	display: inline-block;
+	color: #9B9B9B;
+	font-size: 14px;
+	line-height: 40px;
+}
+
+.inputView .signIn {
+	float: right;
+	color: #FFFFFF;
+	font-size: 14px;
+	background-color: #FF5437;
+	border-radius: 30px;
+	margin-top: 40px;
+	width: 100px;
+	line-height: 24px;
+}
+
+.loginImage {
+	width: 100%;
+	display: inline-block;
+}
+
+.loginImage image {
+	width: 153px;
+	display: block;
+	margin: 150rpx auto;
+}
+
+
+button::after {
+	border: none;
+}
+
+button {
+	background-color: transparent;
+	padding-left: 0;
+	padding-right: 0;
+	line-height: inherit;
+	outline: 0;
+	border-radius: 0;
+}
+
+button[disabled] {
+	background-color: transparent !important;
+}
+
+.btn-hover {
+	box-shadow: none;
+}
+
+/* //镂空按钮 点击阴影不宜太深 */
+.plain-hover {
+	box-shadow: none;
+}
+
+.work-from {
+	width: 100%;
+	height: auto;
+	display: inline-block;
+}

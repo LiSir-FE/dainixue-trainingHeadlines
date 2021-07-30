@@ -1,0 +1,54 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/classRoom/index",
+        "pages/my/index",
+        "pages/login/index",
+        "pages/aboutUs/index",
+        "pages/InformationDetails/index",
+        "pages/collection/index",
+        "pages/search/index",
+        "pages/history/index",
+        "pages/editInfo/index",
+        "pages/trainVadios/index",
+        "pages/planner/index",
+        "pages/link/link",
+        "pages/orderList/index",
+        "pages/pay/index"
+    ],
+    "window": {
+        "backgroundColor": "#FFFFFF",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#FFFFFF",
+        "navigationBarTitleText": "培训头条",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#949494",
+        "selectedColor": "#FF5437",
+        "backgroundColor": "#FFFFFF",
+        "borderStyle": "white",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "images/index/tab-index.png",
+                "selectedIconPath": "images/index/tab-indexs.png"
+            },
+            {
+                "pagePath": "pages/classRoom/index",
+                "text": "课堂",
+                "iconPath": "images/index/tab-classroom.png",
+                "selectedIconPath": "images/index/tab-classrooms.png"
+            },
+            {
+                "pagePath": "pages/my/index",
+                "text": "我的",
+                "iconPath": "images/index/tab-me.png",
+                "selectedIconPath": "images/index/tab-mes.png"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json",
+    "style": "v2"
+}

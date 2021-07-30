@@ -1,0 +1,142 @@
+/* miniprogram/pages/search/index.wxss */
+.nav .van-nav-bar {
+	background-color: #FF775D !important;
+}
+
+/* .van-nav-bar .van-nav-bar__title{
+    font-size: 14px !important;
+} */
+
+.van-hairline--bottom:after {
+	border-bottom-width: 0px !important;
+}
+
+.van-cell__left-icon-wrap {
+	color: red
+}
+
+.van-search {
+	padding: 18px 16px !important;
+}
+
+.van-tabs--line .van-tabs__wrap {
+	height: auto !important;
+	display: inline-block !important;
+}
+
+.van-tab {
+	padding: 0 !important;
+	line-height: 20px !important;
+}
+
+.van-tabs--line {
+	padding-top: 0 !important;
+}
+
+page {
+	background: #F7F8FA;
+	position: relative;
+}
+
+page .container {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	background: #F7F8FA;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	box-sizing: border-box;
+}
+
+.headerView {
+	width: 100%;
+	height: auto;
+	background-color: #FFFFFF;
+}
+
+.headerSearch {
+	width: 90%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.headerSearch .headerSearchBtn {
+	width: 85%;
+	display: inline-block;
+}
+
+.van-field__input {
+	font-size: 16px !important;
+}
+
+.headerSearch .select-wrap {
+	width: 15%;
+	float: right;
+}
+
+
+.tabs {
+	width: 100%;
+	color: #4A4A4A;
+	padding-bottom: 18px;
+	box-sizing: border-box;
+}
+
+.tabs .van-tabs__wrap {
+	background-color: #FFFFFF !important;
+	width: 85%;
+	padding-left: 3%;
+	box-sizing: border-box;
+}
+
+.van-tab--active .van-tab__title {
+	color: #FF5437 !important;
+	font-size: 14px !important;
+}
+
+.van-tab .van-tab__title {
+	font-size: 14px;
+	color: #4A4A4A;
+}
+
+.van-tabs {
+	width: 90%;
+	height: auto;
+	display: list-item;
+}
+
+.van-hairline--top-bottom:after {
+	border-width: 0 !important;
+}
+
+.bannerStyle {
+	width: 100%;
+}
+
+.dataNum {
+	width: 100%;
+	font-size: 12px;
+	color: #4A4A4A;
+}
+
+.dataNum .dataNums {
+	width: 83%;
+	margin: 0 auto;
+	line-height: 40px;
+}
+
+.dataNums .dataNumss {
+	color: #FF5437;
+}
+
+.realTimeInfoView {
+	width: 100%;
+	height: 79%;
+}
+
+.realTimeViews {
+	width: 100%;
+	height: 100%;
+}

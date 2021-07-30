@@ -1,0 +1,7 @@
+{
+	"component": true,
+	"usingComponents": {
+		"mytabs": "../../components/tabs/tabs",
+		"van-icon": "vant-weapp/icon/index"
+	}
+}

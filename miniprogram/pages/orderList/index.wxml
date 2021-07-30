@@ -1,0 +1,7 @@
+<wxs src="../../filter/time.wxs" module="filter" />
+
+<!-- <van-nav-bar title="课堂" class="nav"></van-nav-bar> -->
+<view class="container">
+	<!-- 书籍 -->
+	<curriculum wx:if="{{isShow}}" type="dingdan" courseArray="{{bookInfo}}" class="curriculumView" h5Flag="{{h5Flag}}"></curriculum>
+</view>

@@ -1,0 +1,15 @@
+<!--miniprogram/pages/trainVadios/index.wxml-->
+<view class="container">
+	<view class="tabs">
+		<mytabs class="trainVadioView" tabArray="{{tabArrays}}" bind:myevent="tabsChange" type="{{courseType}}"
+			color="#ffffff"></mytabs>
+	</view>
+
+	<myvideos wx:if="{{isShow}}" class="myvideos" videoArray="{{videoArrays}}" type="{{id}}" bind:myevent="aaa"
+		bind:myeventType="myeventType"></myvideos>
+	<view class="body-view" wx:if="{{!hidden}}">
+		<loading hidden="{{hidden}}" bindchange="loadingChange">
+			加载中...
+		</loading>
+	</view>
+</view>

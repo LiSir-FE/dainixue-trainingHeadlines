@@ -1,0 +1,201 @@
+/* miniprogram/pages/my/index.wxss */
+
+
+/* .van-nav-bar .van-nav-bar__title{
+    font-size: 14px !important;
+} */
+
+.van-hairline--bottom:after {
+	border-bottom-width: 0px !important;
+}
+
+page {
+	background: #F7F8FA;
+	position: relative;
+}
+
+page .container {
+	width: 100%;
+	height: auto;
+	padding: 0;
+	margin: 0;
+	background: #F7F8FA;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	box-sizing: border-box;
+}
+
+.headerBanner {
+	width: 100%;
+	height: 204px;
+	background-image: linear-gradient(#FF775D, #FF4230);
+	/* background-color: #FF775D; */
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	position: relative;
+}
+
+.headerBanner .headerPortrait {
+	width: 54px;
+	height: 54px;
+	margin: 0 auto;
+	overflow: hidden;
+	border-radius: 50%;
+	border: 3px solid #FFFFFF;
+}
+
+.headerPortrait .portrait {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.headerBanner .headerInfo {
+	width: 100%;
+	text-align: center;
+	font-size: 14px;
+	color: #FFFFFF;
+	padding: 10px 0;
+	box-sizing: border-box;
+}
+
+.headerInfo .headerButton {
+	font-size: 12px;
+	color: #FFFFFF;
+	display: inline-block;
+	background-color: rgba(255, 255, 255, 0.1);
+	padding: 5px 10px;
+	box-sizing: border-box;
+	border-radius: 20% !important;
+}
+
+.headerInfo .headerName,
+.headerInfo .headerPhone {
+	display: inline-block;
+}
+
+.headerInfo .headerPhone {
+	padding-left: 5px;
+	box-sizing: border-box;
+}
+
+.dataView {
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 90%;
+	background-color: #FFFFFF;
+	border-radius: 15px;
+	padding: 15px 30px;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+
+.dataView .dataInfoItem {
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+	/* height: 204rpx; */
+	box-sizing: border-box;
+}
+
+.dataInfoItem .dataInfoItemIcon {
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+	font-size: 30px;
+	width: 32px;
+	height: 32px;
+	margin: 0 auto;
+}
+
+.dataInfoItem .dataInfoItemText {
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+	color: #666;
+	font-size: 12px;
+	line-height: 30px;
+}
+
+.cellView {
+	width: 90%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.cellView .cellViewItem {
+	margin: 10px 0;
+	box-sizing: border-box;
+	background-color: #FFFFFF;
+	border-radius: 10px;
+	display: block;
+}
+
+.signOut {
+	position: absolute;
+	bottom: 30px;
+}
+
+/* .signOut .signOutBtn{
+	border-radius: 50px !important;
+	font-size: 12px !important;
+	color: #FFFFFF;
+} */
+.signOutBtn .van-button--normal {
+	font-size: 12px;
+}
+
+.dialog-text {
+	font-size: 12px;
+	color: #333333;
+	text-align: center;
+	position: relative;
+	top: -20px;
+}
+
+
+button::after {
+	border: none;
+}
+
+
+.work-input-panel {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 88rpx;
+	line-height: 88px;
+	background: #fff;
+	border-radius: 10px;
+	margin-top: 10px;
+}
+
+.work-input-title {
+	width: 24px;
+	height: 24px;
+	padding: 12px 13px;
+	display: block;
+}
+
+
+.work-input {
+	height: 100%;
+	font-size: 28rpx;
+	flex-grow: 1;
+	flex-shrink: 1;
+	line-height: 88rpx;
+}
+
+.placeholder-class {
+	font-family: PingFangSC-Regular;
+	font-size: 28rpx;
+	color: #ccc;
+	letter-spacing: 0;
+	line-height: 28rpx;
+}

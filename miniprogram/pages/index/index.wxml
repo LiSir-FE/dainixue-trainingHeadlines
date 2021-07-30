@@ -1,0 +1,138 @@
+<!--index.wxml-->
+<view class="container">
+
+
+    <view class="containerView" id="containerViewId">
+        <!-- 头部 -->
+        <view class="headerBanner">
+            <van-nav-bar title="带你学科技" class="nav"></van-nav-bar>
+            <image class="bannerStyle" mode="widthFix" src="{{bannerSrc.thumb_img}}" data-courseType="{{bannerSrc.course_type}}"  data-id="{{bannerSrc.id}}"
+                bindtap="bannerFn" bindload="imageLoad"></image>
+            <!-- 搜索 -->
+            <view class="seach" bindtap="seachFn">
+                <image src="{{indexSearch}}" mode="widthFix"></image>
+                <!-- <van-icon name="search" size="24px" color="#FFFFFF"></van-icon> -->
+            </view>
+
+            <!-- tab切换 -->
+            <view class="tabs">
+                <van-tabs active="{{active}}" bind:change="tabsChange" color="#FFFFFF">
+                    <block wx:for="{{activeArray}}" wx:key="*this">
+                        <van-tab title="{{item.title}}" name="{{item.id}}"></van-tab>
+                    </block>
+                </van-tabs>
+            </view>
+        </view>
+
+
+        <!-- 垂直滚动公告 -->
+        <view class="noticeView">
+            <view class="notice">
+                <image src="../../images/index/index-notice.png"></image>
+                <!-- <van-icon name="volume-o" size="12px" color="#D91515"></van-icon> -->
+                <swiper class='swiper-container' autoplay='true' vertical='true' circular='true' interval='2000'>
+                    <block wx:for='{{msgList}}' wx:key="index">
+                        <swiper-item>
+                            <view class='swiper-item'>{{item}}</view>
+                        </swiper-item>
+                        <!-- <navigator url='../InformationDetails/index' open-type='navigate'>
+                        
+                    </navigator> -->
+                    </block>
+                    <!-- <van-icon name="volume-o" size="12px" color="#D91515"></van-icon> -->
+                </swiper>
+                <!-- <text class="xiangqing">详情</text> -->
+            </view>
+        </view>
+
+
+    </view>
+
+    <view style="width: 100%;margin-top: {{marginHeight}}px;display:inline-block;overflow:hidden">
+
+
+        <!-- 图片 -->
+        <view class="image">
+            <image class="images" mode="widthFix" src="{{imagesSrc}}"></image>
+        </view>
+
+        <!-- 图文 -->
+        <view class="blackText">
+            <view wx:for="{{imageText}}" wx:key="index" class="blackView">
+                <navigator url='../../pages/InformationDetails/index?top_id={{item.id}}' open-type='navigate' style="display:flex">
+                    <view class="{{item.thumb_img ? 'blackTitleView2' : 'blackTitleView'}}">
+                        <text class="{{item.thumb_img ? 'blackTitle2' : 'blackTitle'}}">{{item.title}}</text>
+                        <image wx:if="{{item.thumb_img}}" mode="widthFix" src="{{item.thumb_img}}" class="blackImage">
+                        </image>
+                        <view class="blackSource">
+                            <view class="iconTextTop" wx:if="{{item.is_hot == '1'}}">置顶</view>
+                            <!-- <van-icon name="{{item.icon}}" class="blackIcon"></van-icon> -->
+                            <text style="position: relative;top:-4rpx">{{item.source}}</text>
+                        </view>
+                    </view>
+                </navigator>
+            </view>
+        </view>
+
+        <!-- 轮播 -->
+        <view class="carousel">
+            <swiper autoplay="{{false}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}"
+                previous-margin="50px" next-margin="50px" style="height:{{imgheights}}px">
+                <block wx:for="{{carousel}}" wx:key="*this">
+                    <swiper-item>
+                        <view style="margin: 0 10px">
+                            <image class="carouselImage" mode="widthFix" src="{{item.thumb_img}}" bindload="imageLoadFn" data-courseType="{{item.course_type}}"  data-id="{{item.id}}" bindtap="bannerFn">
+                            </image>
+                        </view>
+                    </swiper-item>
+                </block>
+            </swiper>
+        </view>
+
+        <!-- 新闻一 -->
+        <view class="journalism1">
+            <view class="journalism1View" data-id="{{journalism1.id}}" bindtap="bannerFns">
+                <view class="journalism1Title">{{journalism1.title}}</view>
+                <view class="journalism1Images">
+                    <image class="journalism1Image" mode="widthFix" src="{{journalism1.thumb_img}}"></image>
+
+                    <!-- <block wx:for="{{journalism1.image}}" wx:key="*this">
+                    <image src="{{item}}" class="journalism1Image"></image>
+                </block> -->
+                </view>
+                <view class="iconTextTop">{{journalism1.tag}}</view>
+                <text class="journalism1Text">{{journalism1.art_tag}}</text>
+            </view>
+        </view>
+
+        <!-- 新闻二 -->
+
+        <!-- 
+    <view class="journalism2">
+        <view class="journalism2View">
+            <view class="journalism2Title">{{journalism2.title}}</view>
+            <view class="journalism2Images">
+                <image src="{{journalism2.image}}" class="journalism2Image"></image>
+            </view>
+            <view style="display:inline-block">
+                <van-icon class="journalism2Icon" name="{{journalism2.icon}}"></van-icon>
+                <text class="journalism2Text">{{journalism2.source}}</text>
+            </view>
+        </view>
+    </view> -->
+
+        <!-- 新闻三 -->
+        <view class="journalism1">
+            <view class="journalism1View" data-id="{{journalism2.id}}" bindtap="bannerFns">
+                <view class="journalism1Title3">{{journalism2.title}}</view>
+                <view class="journalism1Images3">
+                    <image src="{{journalism2.thumb_img}}" mode="widthFix" class="journalism1Image"></image>
+                </view>
+                <!-- <view class="iconTextTop">{{journalism1.art_tag}}</view>
+            <text class="journalism1Text">{{journalism1.source}}</text> -->
+            </view>
+        </view>
+    </view>
+
+
+</view>

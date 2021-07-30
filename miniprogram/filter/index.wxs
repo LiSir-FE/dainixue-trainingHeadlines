@@ -1,0 +1,5 @@
+var toHide = function (val) {
+    var mphone = val.substring(0, 3) + '****' + val.substring(7);
+  	return mphone;
+}
+module.exports.toHide = toHide;

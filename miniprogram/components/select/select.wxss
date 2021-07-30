@@ -1,0 +1,68 @@
+.com-selectBox{
+    width: 100%;
+}
+.com-sContent{
+    background: white;
+    font-size: 16px;
+    position: relative;
+    height: 54px;
+    line-height: 70px;
+}
+.com-sImg{
+    position: absolute;
+    right: 10px;
+    top: 33px;
+    width: 5px;
+    transition: all .3s ease;
+}
+.com-sTxt{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+	font-size: 14px;
+    color: #333333;
+    box-sizing: border-box;
+}
+.com-sList{
+    background: white;
+    /* width: 63px; */
+    /* height: 60px; */
+    position: absolute;
+    border-top: none;
+    box-sizing: border-box;
+    z-index: 3;
+    max-height: 120px;
+    border-radius: 10px;
+    overflow: auto;
+    /* padding: 10px 20px; */
+    right: 24px;
+    /* overflow: hidden; */
+    box-shadow: 1px 1px 5px #ccc;
+    box-sizing: border-box;
+}
+.com-sItem{
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 12px;
+    /* line-height: 20px; */
+    color: #333333;
+    /* padding: 10px 20px; */
+    width: 40px;
+    padding: 10px 15px;
+    position: relative;
+    /* box-sizing: border-box; */
+}
+.com-sItem:first-child{
+    border-top: none;
+}
+
+
+
+.com-sImgs{
+    width: 10px;
+    position: absolute;
+    right: 10px;
+    top: 14px;
+}

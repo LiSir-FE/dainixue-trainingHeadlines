@@ -1,0 +1,5 @@
+<!-- <van-nav-bar title="我的收藏" class="nav"></van-nav-bar> -->
+<view class="container">
+	<!-- 书籍 -->
+	<curriculum courseArray="{{bookInfo}}" class="curriculumView"></curriculum>
+</view>

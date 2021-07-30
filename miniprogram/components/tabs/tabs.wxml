@@ -1,0 +1,10 @@
+<!--components/tabs/tabs.wxml-->
+<view class="tab-container">
+	<block wx:for="{{tabArray}}" wx:key="*this" class="tansView">
+		<view class="default {{item.id == type ? 'expend-active':'earning-active'}}" data-id="{{item.id}}"
+			bindtap="tabsChange">
+			<view style="color: {{color}}">{{item.title}}</view>
+			<view class="{{item.id == type ? 'colorBlack':''}}"></view>
+		</view>
+	</block>
+</view>

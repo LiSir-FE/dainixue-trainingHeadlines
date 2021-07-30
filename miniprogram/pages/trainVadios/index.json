@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "trainVadio": "../../components/trainVadio/trainVadio",
+    "mytabs": "../../components/tabs/tabs",
+    "myvideos": "../../components/trainVadio/trainVadio"
+  },
+  "navigationBarTitleText": "好课推介"
+}

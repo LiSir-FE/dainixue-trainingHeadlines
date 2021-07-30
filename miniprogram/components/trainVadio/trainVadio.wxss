@@ -1,0 +1,247 @@
+/* components/trainVadio/trainVadio.wxss */
+.nav .van-nav-bar {
+    background-color: #C98E75 !important;
+}
+
+/* .van-nav-bar .van-nav-bar__title{
+    font-size: 14px !important;
+} */
+
+.van-hairline--bottom:after {
+    border-bottom-width: 0px !important;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background: #F7F8FA;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-bottom: 5px;
+    box-sizing: border-box;
+}
+
+.tabs {
+    width: 100%;
+    color: #FFFFFF
+}
+
+
+.tabs .van-tabs__wrap {
+    background-color: transparent !important;
+}
+
+
+.bannerStyle {
+    width: 100%;
+}
+
+.van-tab--active .van-tab__title {
+    color: #000000 !important;
+    font-size: 12px !important;
+}
+
+.van-tab .van-tab__title {
+    font-size: 12px;
+    color: #333333;
+}
+
+
+.van-hairline--top-bottom:after {
+    border-width: 0 !important;
+}
+
+.van-tabs__line {
+    bottom: 10px !important;
+    width: 15px !important;
+    height: 10px !important;
+    background-color: rgba(255, 0, 0, 0.1) !important;
+    transform: translateX(100%) !important;
+}
+
+.realTimeInfoView {
+    width: 100%;
+}
+
+
+page {
+    width: 100%;
+    height: 100%;
+}
+
+.q_swiper {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+}
+
+.q_videoView {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.q_videoView video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.describe {
+    width: 80%;
+    height: auto;
+    position: fixed;
+    left: 14px;
+    top: 75%;
+    z-index: 2;
+}
+
+.describe .describeHead {
+    font-size: 12px;
+    color: #FF5437;
+    width: 80%;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.describe .describeText {
+    font-size: 14px;
+    width: 80%;
+    color: #FFFFFF;
+    line-height: 20px;
+    display: -webkit-box;
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.describe .describeLink {
+    font-size: 16px;
+    color: #FFFFFF;
+    width: 100%;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 10px 0;
+    box-sizing: border-box;
+
+}
+
+.shareView {
+    height: auto;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    right: 12px;
+    top: 80px;
+}
+button[size='mini']{
+    padding: 0;
+}
+
+.shareView image {
+    width: 24px;
+    height: 24px;
+    display: block;
+    margin: 10px 0;
+}
+
+.signUp {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 5px 0;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+}
+
+.signUp .signUpLeft {
+    width: 30%;
+    text-align: right;
+    color: #FF5437;
+    font-size: 14px;
+    font-weight: 500;
+    float: left;
+    margin-top: 6px;
+    box-sizing: border-box;
+    text-align: center;
+    /* line-height: 30px; */
+    border-right: 1px solid #FF5437;
+}
+
+.signUp .signUpRight {
+    width: 70%;
+    text-align: right;
+    color: #FF5437;
+    font-size: 14px;
+    float: left;
+    height: 100%;
+    text-align: center;
+    font-size: 12px;
+}
+
+.signUpRight .signUpRightPriceVip {
+    font-size: 24px;
+    font-weight: 500;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+
+.signUpRight .signUpRightPrice {
+    font-size: 10px;
+    text-decoration: line-through;
+    /* padding-top: 15px; */
+    padding-left: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    opacity: 0.4;
+}
+
+.teacherView{
+    position: fixed;
+    z-index: 10;
+    right:2%;
+    width: 69px;
+    bottom: 21%;
+}
+
+.teacherView image{
+    width: 100%;
+    display: block;
+}
+
+.bottom{
+    width: 90%;
+    height: auto;
+    display: flex;
+    position: fixed;
+    left: 5%;
+    bottom: 10%;
+}
+
+.kecxiangq{
+    width: 30%;
+    border-radius: 5px;
+    background: linear-gradient(148deg, #F8316C 0%, #F9684D 100%);
+    text-align: center;
+    line-height: 40px;
+    color: #ffffff;
+    font-size: 12px;
+    margin-left: 5%;
+}

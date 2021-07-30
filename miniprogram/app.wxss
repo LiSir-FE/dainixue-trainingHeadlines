@@ -1,0 +1,51 @@
+/**app.wxss**/
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+} 
+
+border{
+  border: 0 !important;
+}
+
+button {
+  background: initial;
+}
+
+button:focus{
+  outline: 0;
+}
+
+button::after{
+  border: none;
+}
+
+.van-hairline--bottom::after{
+  border-bottom-width: 0px;
+}
+
+
+page {
+  background: #FFFFFF;
+  min-height: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+
+.container {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  background: #F7F8FA;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-bottom: 5px;
+  box-sizing: border-box;
+}

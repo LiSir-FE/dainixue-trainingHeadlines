@@ -1,0 +1,46 @@
+/* components/tabs/tabs.wxss */
+.tab-container {
+	width: 80%;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	box-sizing: border-box;
+	position: fixed;
+	left: 10%;
+	top: 0;
+	z-index: 2;
+  }
+   
+  .tab-container .default {
+	text-align: center;
+	flex: 1;
+	font-size: 16px;
+	line-height: 50px;
+	position: relative;
+	z-index: 2;
+  }
+   
+  .expend-active {
+	color: #000000;
+	font-weight: 500;
+  }
+   
+  .earning-active {
+	color: #333333;
+	font-size: 14px;
+  }
+
+  .colorBlack{
+		position: absolute;
+		width: 26px;
+		height: 5px;
+		left: 50%;
+		margin-left: -13px;
+		bottom: 15px;
+		z-index: -1;
+		background: #F6C643;
+		border-radius: 30px;
+  }

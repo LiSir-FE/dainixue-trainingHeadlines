@@ -1,0 +1,21 @@
+<!--components/dialog/dialog.wxml-->
+<view class="dialog-custom" wx:if="{{visible}}" >  
+  <view class="dialog-mask" bindtap='clickMask'></view>  
+  <view class="dialog-main">
+    <view class="dialog-container">
+      <view class="dialog-container_title" wx:if="{{title.length>0}}">
+        <view class="title-label">{{title}}</view>
+        <view class="title-icon">
+          <image wx:if="{{showClose}}" bindtap='close' src='{{img}}'></image> 
+        </view>
+      </view>
+      <view class="dialog-container_body">
+        <slot name='dialog-body'></slot><view slot='dialog-body'></view>
+      </view>
+      <view class="dialog-container_footer" wx:if="{{showFooter}}"> 
+        <view class="dialog-container_footer_cancel" bindtap='close'>取消</view>  
+        <view class="dialog-container_footer_confirm" bindtap='confirm' style="color:{{color}}">确定</view> 
+      </view>
+    </view>
+  </view>
+</view>

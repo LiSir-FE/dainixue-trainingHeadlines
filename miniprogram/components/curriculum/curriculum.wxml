@@ -1,0 +1,44 @@
+<!-- <van-nav-bar title="我的收藏" class="nav"></van-nav-bar> -->
+<view class="container">
+	<!-- 无数据课程 -->
+	<view wx:if="{{courseArray.length <= 0 }}" class="nullPageView">
+		<image class="bannerStyle" mode="widthFix" src="{{nullPage}}"></image>
+		<text>您还没有收藏, 快去看看吧</text>
+	</view>
+	<!-- 书籍 -->
+	<view class="bookView" wx:else>
+		<block wx:for="{{courseArray}}" wx:key="*this">
+			<view bindtap="bookFn" data-courseBasicId="{{item.course_basic_id}}" data-courseType="{{item.course_type}}"  data-id="{{item.id}}">
+				<view class="bookViewItem">
+					<view class="bookViewItems">
+						<image class="bookViewItemsImage" mode="widthFix" src="{{item.thumb_img}}"></image>
+						<image class="recommend" mode="widthFix" src="{{recommend}}" wx:if="{{!item.course_basic_id}}">
+						</image>
+					</view>
+					<view class="bookViewItems">
+						<view class="bookViewItemsTitle">{{item.title}}</view>
+						<!-- <view class="bookViewItemsTime">
+							<view class="bookViewItemsTimeText">共{{item.classHour}}课时</view>
+							<van-icon name="{{item.timeIcon}}" class="bookViewItemsTimeIcon"></van-icon>
+							<text class="bookViewItemsTimeText">{{filter.formatDateS(item.time)}}</text>
+						</view> -->
+						<view class="bookViewItemsDesc">{{item.get_recommend ? item.get_recommend.marketing_language : item.marketing_language}}</view>
+						<view class="bookViewItemsTeacher">授课: {{item.teacher_name}}</view>
+					</view>
+					<view class="bookViewItems">
+						<!-- <image class="bannerStyles" mode="widthFix" src="{{starsImg}}" wx:if="{{stars}}"></image> -->
+						<image class="bannerStyle" mode="widthFix" src="{{roomPlay}}" wx:if="{{!stars && h5Flag}}" bindtap="bannerFn">
+						</image>
+						<!-- <van-icon name="{{item.aplay}}" class="bookViewItemsAplayIcon"></van-icon> -->
+					</view>
+				</view>
+			</view>
+		</block>
+		
+		<view class="textView" wx:if="{{!id && courseArray.length >= 1 }}">
+			<text class="textView1" bindtap="login">登录</text>
+			<text class="textView2">后查看,已购买课程</text>
+		</view>
+		<view class="textView" wx:if="{{id && !h5Flag}}">您还没有购买课程，快去看看吧</view>
+	</view>
+</view>
