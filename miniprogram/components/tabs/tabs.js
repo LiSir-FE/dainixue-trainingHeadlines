@@ -25,7 +25,8 @@ Component({
 
 
 	onLoad() {
-		
+	},
+	ready(e) {
 	},
 
 

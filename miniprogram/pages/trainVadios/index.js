@@ -15,7 +15,7 @@ Page({
 	// tabs切换
 	tabsChange(e) {
 		this.setData({
-			id: e.detail,
+			courseType: e.detail,
 		})
 		this.getRecommendDetail(e.detail)
 	},
@@ -84,17 +84,20 @@ Page({
 	myeventType(e) {
 		if (e.detail == 1) {
 			this.setData({
-				id: 2
+				id: 2,
+				courseType: 2
 			})
 			this.getRecommendDetail(2, this.data.id, wx.getStorageSync('userInfo').id)
 		} else if (e.detail == 2) {
 			this.setData({
-				id: 3
+				id: 3,
+				courseType: 3
 			})
 			this.getRecommendDetail(3, this.data.id, wx.getStorageSync('userInfo').id)
 		} else {
 			this.setData({
-				id: 1
+				id: 1,
+				courseType: 1
 			})
 			this.getRecommendDetail(1, this.data.id, wx.getStorageSync('userInfo').id)
 		}

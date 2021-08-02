@@ -76,7 +76,7 @@
 
         <!-- 轮播 -->
         <view class="carousel">
-            <swiper autoplay="{{false}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}"
+            <swiper autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}"
                 previous-margin="50px" next-margin="50px" style="height:{{imgheights}}px">
                 <block wx:for="{{carousel}}" wx:key="*this">
                     <swiper-item>

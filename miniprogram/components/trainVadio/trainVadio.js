@@ -158,11 +158,11 @@ Component({
 			// 当加载的视频还剩1个未被滑到时加载下一页
 			if (e.detail.current + 1 >= this.data.videoArray.length) {
 				// this.q_yjzVideos(this.data.type) //预加载视频
-				let a = {
-					type: this.data.type,
-					current: e.detail.current,
-					leght: this.data.videoArray.length
-				}
+				// let a = {
+				// 	type: this.data.type,
+				// 	current: e.detail.current,
+				// 	leght: this.data.videoArray.length
+				// }
 			}
 		},
 		_transition(e) {
@@ -170,7 +170,6 @@ Component({
 			//如果到底部还继续往下拉，这弹出提示框
 			if (dy == 0 && this.data.dyAry[this.data.dyAry.length - 1] > 0) {
 				this.data.dyAry = [];
-				console.log(e)
 				this.triggerEvent('myeventType', this.data.type)
 			}
 			this.data.dyAry.push(dy)
